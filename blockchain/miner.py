@@ -48,7 +48,7 @@ def valid_proof(last_hash, proof):
 
     # TODO: Your code here!
     current_hash = hashlib.sha256(f'{proof}'.encode()).hexdigest()
-    return last_hash[-6:] == current_hash[:6]
+    return last_hash[-5:] == current_hash[:5]
 
 
 if __name__ == '__main__':
