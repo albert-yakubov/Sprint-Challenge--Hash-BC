@@ -24,9 +24,14 @@ def proof_of_work(last_proof):
     start = timer()
 
     print("Searching for next proof")
-    proof = random.randint(-2145545643, 2145545642)
+    proof = 000000
     #  TODO: Your code here
     while valid_proof(previous_hash, proof) is False:
+        
+        if proof % 2 == 0:
+            proof += 7
+        else:
+            proof += 5
         proof += 1
 
     
