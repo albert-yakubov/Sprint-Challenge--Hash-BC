@@ -28,12 +28,12 @@ def reconstruct_trip(tickets, length):
         hash_table_insert(hashtable, i.source, i.destination)
     
     # grab the destination that was just inserted
-    destination = hash_table_retrieve(hashtable, 'None')
+    destination = hash_table_retrieve(hashtable, 'NONE')
     # then append the destination to the route
-    while destination != None:
+    while destination != 'NONE':
         route.append(destination)
         destination = hash_table_retrieve(hashtable, destination)
         
-        return route 
+    return route 
         
     
